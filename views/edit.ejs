@@ -1,0 +1,22 @@
+<%- include myview.ejs %>
+
+<div class="container">
+	<form action="/saveForm" method="post">
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<input class="form-control" name="name" value="<%= data[0].name %>" placeholder="First Name">
+			</div>
+			<div class="col-sm-4">
+				<input class="form-control" name="last_name" value="<%= data[0].last_name %>" placeholder="Last Name">
+			</div>
+			<div class="col-sm-4">
+				<input class="form-control" name="phone" value="<%= data[0].phone %>" placeholder="Contact Number">
+				<input class="form-control" type="hidden" name="id" value="<%= data[0].id %>" placeholder="Contact Number">
+			</div>
+			<div class="col-sm-12 text-center mt-2"> 
+				<input type="submit" class="btn btn-success btn-sm">
+			</div>
+		</div>
+	</form>
+</div>

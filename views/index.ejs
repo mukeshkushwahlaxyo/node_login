@@ -1,0 +1,34 @@
+ <%- include myview.ejs %>
+  	<div class="container">  		
+	  	<div class="row">  		
+		  	<table class="table">
+		  		<thead>  			
+			  		<tr>
+			  			<th>SNo.</th>
+			  			<th>First Name</th>
+			  			<th>Last Name</th>
+			  			<th>Phone</th>
+			  			<th>Action</th>
+			  		</tr>
+		  		</thead>
+		  		<tbody>
+		  			
+		  			<% title.forEach(function(titles,index) { %>
+		  				<tr>
+		  					<td><%= ++index %></td>
+					    	<td><%= titles.name %></td>
+					    	<td><%= titles.last_name %></td>
+					    	<td><%= titles.phone %></td>
+					    	<td>
+					    		<a href="/edit/<%= titles.id %>" class="btn btn-primary btn-sm fa fa-pencil"></a>
+					    		<a class="btn btn-danger btn-sm fa fa-trash"></a>
+					    	</td>
+		  				</tr>
+					<% }) %>    
+		  		</tbody>
+		  	</table>
+	  	</div>
+	</div>  	
+  </body>
+
+</html>
